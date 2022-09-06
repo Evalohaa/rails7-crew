@@ -11,7 +11,7 @@ class ArgonautesController < ApplicationController
     @argonaute = Argonaute.new(argonaute_params)
     @argonaute.save
     if @argonaute.save
-      render :new, notice: "L'Argonaute a bien été ajouté !"
+      redirect_to root_path, notice: "L'Argonaute a bien été ajouté !"
     else
       render :new, notice: "Echec ! Cet Argonaute n'a pas pu être enregistré"
     end
