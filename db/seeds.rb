@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Deleting all the seeds"
+Argonaute.destroy_all
+
+puts "Creating Argonautes"
+argonaute_1 = Argonaute.create(name: "Jules")
+argonaute_2 = Argonaute.create(name: "Socrate")
+argonaute_3 = Argonaute.create(name: "Hippocrate")
