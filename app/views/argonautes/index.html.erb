@@ -10,11 +10,11 @@
 
   <!-- New member form -->
   <h2>Ajouter un(e) Argonaute</h2>
-  <%= simple_form_for @argonaute do |f| %>
-    <%= f.label :name %>
-    <%= f.input :name %>
-    <%= f.button :submit %>
-  <% end %>
+  <%# <%= simple_form_for @argonaute do |f| %>
+    <%# <%= f.label :name %>
+    <%# <%= f.input :name %>
+    <%# <%= f.button :submit %>
+  <%# <% end %>
   <form class="new-member-form">
     <label for="name">Nom de l&apos;Argonaute</label>
     <input id="name" name="name" type="text" placeholder="Charalampos" />
@@ -23,11 +23,14 @@
 
   <!-- Member list -->
   <h2>Membres de l'équipage</h2>
-  <section class="member-list">
+  <% @argonautes.each do |argonaute| %>
+    <li><%= argonaute.name %></li>
+  <% end %>
+  <%# <section class="member-list">
     <div class="member-item">Eleftheria</div>
     <div class="member-item">Gennadios</div>
     <div class="member-item">Lysimachos</div>
-  </section>
+  </section> %>
 </main>
 
 <footer>
