@@ -1,18 +1,18 @@
 class ArgonautesController < ApplicationController
   def index
+    @argonaute = Argonaute.new
     @argonautes = Argonaute.all
   end
 
-  def new
-    @argonaute = Argonaute.new
-  end
+  # def new
+  #   @argonaute = Argonaute.new
+  # end
 
   def create
-    @argonautes = Argonaute.all
     @argonaute = Argonaute.new(argonaute_params)
     @argonaute.save
     if @argonaute.save
-      redirect_to argonautes_path, notice: "L'Argonaute a bien été ajouté !"
+      redirect_to root_path, notice: "L'Argonaute a bien été ajouté !"
     else
       render :new, notice: "Echec ! Cet Argonaute n'a pas pu être enregistré"
     end

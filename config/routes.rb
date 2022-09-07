@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'argonautes#index'
-  resources :argonautes, only: [ :index, :new, :create]
+  resources :argonautes, only: [ :new, :create ]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
