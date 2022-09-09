@@ -60,3 +60,22 @@ label {
 	padding: 0.25em 0;
   list-style-type: none;
 }
+
+.form-control {
+  width: 20%;
+  height: 23px;
+  border: 0.7px solid black;
+  background-color: white;
+}
+
+.btn {
+  border: 0.7px solid black;
+  width: 10%;
+  // height: 23px;
+  background-color: EFEFEF;
+  text-align: center;
+}
+
+// .form {
+//   display: flex;
+// }
