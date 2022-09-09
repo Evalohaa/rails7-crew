@@ -15,23 +15,32 @@
 
   <!-- Member list -->
   <h2>Membres de l'équipage</h2>
-  <div class="argo-lists">
-    <div>
-      <% @argonautes_1.each do |argonaute| %>
-        <li class="member-item"><%= argonaute.name %></li>
-      <% end %>
-    </div>
-    <div>
-      <% @argonautes_2.each do |argonaute| %>
-        <li class="member-item"><%= argonaute.name %></li>
-      <% end %>
-    </div>
-    <div>
-      <% @argonautes_3.each do |argonaute| %>
-        <li class="member-item"><%= argonaute.name %></li>
-      <% end %>
-    </div>
-  </div>
+
+  <%# La méthode avec tous les noms qui s'affichent à la suite %>
+  <% @argonautes.each do |argonaute| %>
+    <li class="member-item"><%= argonaute.name %>
+  <% end %>
+
+  <%# La métode pour faire des colonnes %>
+  <%# <div class="argo-lists"> %>
+    <%# <div> %>
+      <%# <% @argonautes_1.each do |argonaute| %>
+        <%# <li class="member-item"><%= argonaute.name %>
+      <%# <% end %>
+    <%# </div> %>
+    <%# <div> %>
+      <%# <% @argonautes_2.each do |argonaute| %>
+        <%# <li class="member-item"><%= argonaute.name</li> %>
+      <%# # <% end %>
+    <%# </div> %>
+    <%# <div> %>
+      <%# <% @argonautes_3.each do |argonaute| %>
+        <%# <li class="member-item"><%= argonaute.name %>
+      <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
+
+  <%# La liste de la WCD %>
   <%# <section class="member-list">
     <div class="member-item">Eleftheria</div>
     <div class="member-item">Gennadios</div>
