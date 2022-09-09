@@ -9,6 +9,6 @@ puts "Deleting all the seeds"
 Argonaute.destroy_all
 
 puts "Creating Argonautes"
-argonaute_1 = Argonaute.create(name: "Jules")
-argonaute_2 = Argonaute.create(name: "Socrate")
-argonaute_3 = Argonaute.create(name: "Hippocrate")
+argonaute_1 = Argonaute.create(name: "Eleftheria")
+argonaute_2 = Argonaute.create(name: "Gennadios")
+argonaute_3 = Argonaute.create(name: "Lysimachos")
