@@ -1,7 +1,8 @@
   <%= simple_form_for @argonaute, :html=> { class: 'new-member-form' } do |f| %>
-    <%# <%= f.label :name %>
-    <%= f.input :name, label: "Nom de l'Argonaute" %>
+    <%# <div class="form"> %>
+    <%= f.input :name, label: "Nom de l'Argonaute", placeholder: "Charalampos" %>
     <%= f.button :submit, "Envoyer" %>
+    <%# </div> %>
   <% end %>
 
   <%# <form class="new-member-form">
