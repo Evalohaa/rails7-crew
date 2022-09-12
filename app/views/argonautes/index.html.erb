@@ -15,23 +15,17 @@
 
   <!-- Member list -->
   <h2>Membres de l'équipage</h2>
+
+  <%# test loop dans loop %>
   <div class="argo-lists">
-    <div>
-      <% @argonautes_1.each do |argonaute| %>
-        <li class="member-item"><%= argonaute.name %></li>
-      <% end %>
-    </div>
-    <div>
-      <% @argonautes_2.each do |argonaute| %>
-        <li class="member-item"><%= argonaute.name %></li>
-      <% end %>
-    </div>
-    <div>
-      <% @argonautes_3.each do |argonaute| %>
-        <li class="member-item"><%= argonaute.name %></li>
-      <% end %>
-    </div>
+    <% @argonautes_splited.each do |argonaute| %>
+      <div><% argonaute.each do |argo| %>
+        <li class="member-item"><%= argo %></li>
+      <% end %></div>
+    <% end %>
   </div>
+
+  <%# La liste de la WCD %>
   <%# <section class="member-list">
     <div class="member-item">Eleftheria</div>
     <div class="member-item">Gennadios</div>

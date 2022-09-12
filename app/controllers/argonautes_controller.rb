@@ -2,14 +2,15 @@ class ArgonautesController < ApplicationController
   def index
     @argonaute = Argonaute.new
     @argonautes = Argonaute.all
-    @number_of_argonautes = @argonautes.count
-    @number_per_column = @number_of_argonautes / 3
-    @argonautes_splited = @argonautes.each_slice(@number_per_column).to_a
+    @argonautes_names = @argonautes.map { |argonaute| argonaute.name }
+    @total_argonautes = @argonautes.count
+    @number_per_column = @total_argonautes / 3
 
-    @argonautes_1 = @argonautes_splited[0]
-    @argonautes_2 = @argonautes_splited[1]
-    @argonautes_3 = @argonautes_splited[2]
-
+    if (@total_argonautes % 3).zero?
+      @argonautes_splited = @argonautes_names.each_slice(@number_per_column).to_a
+    else
+      @argonautes_splited = @argonautes_names.each_slice(@number_per_column + 1).to_a
+    end
   end
 
   def create
@@ -27,5 +28,4 @@ class ArgonautesController < ApplicationController
   def argonaute_params
     params.require(:argonaute).permit(:name)
   end
-
 end
