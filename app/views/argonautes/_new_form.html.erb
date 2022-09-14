@@ -1,16 +1,6 @@
-  <%= simple_form_for @argonaute, :html=> { class: 'new-member-form' } do |f| %>
-    <div class="input-center">
-      <div>
-        <%= f.input :name, label: "Nom de l'Argonaute", placeholder: "Charalampos" %>
-      </div>
-      <div>
-        <%= f.button :submit, "Envoyer" %>
-      </div>
-    </div>
-  <% end %>
-
-  <%# <form class="new-member-form">
+  <form class="new-member-form" action="/argonautes" method="post">
     <label for="name">Nom de l&apos;Argonaute</label>
-    <input id="name" name="name" type="text" placeholder="Charalampos" />
+    <input id="argonaute_name" name="argonaute[name]" type="text" placeholder="Charalampos" />
     <button type="submit">Envoyer</button>
-  </form> %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
