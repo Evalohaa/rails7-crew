@@ -10,13 +10,10 @@
 
   <!-- New member form -->
   <h2>Ajouter un(e) Argonaute</h2>
-
   <%= render "new_form" %>
-
+  
   <!-- Member list -->
   <h2>Membres de l'équipage</h2>
-
-  <%# test loop dans loop %>
   <div class="argo-lists">
     <% @argonautes_splited.each do |argonaute| %>
       <div><% argonaute.each do |argo| %>
@@ -24,13 +21,6 @@
       <% end %></div>
     <% end %>
   </div>
-
-  <%# La liste de la WCD %>
-  <%# <section class="member-list">
-    <div class="member-item">Eleftheria</div>
-    <div class="member-item">Gennadios</div>
-    <div class="member-item">Lysimachos</div>
-  </section> %>
 </main>
 
 <footer>
